@@ -1,4 +1,4 @@
-export default (state, action) => {
+const reducer = (state, action) => {
     switch(action.type){
         case 'DELETE_TRANSACTION':
             return{
@@ -13,7 +13,7 @@ export default (state, action) => {
         case 'CLEAR_TRANSACTION':
             return {
                 ...state,
-                transactions: state.transactions.filter(transaction => transaction === action.payload),
+                transactions: state.transactions.filter(transaction => transaction !== action.payload),
             
                 
             }
@@ -21,3 +21,5 @@ export default (state, action) => {
             return state; 
     }
 }
+
+export default reducer
