@@ -13,7 +13,7 @@ export default (state, action) => {
         case 'CLEAR_TRANSACTION':
             return {
                 ...state,
-                transactions: state.transactions.filter(transaction => transaction == action.payload),
+                transactions: state.transactions.filter(transaction => transaction === action.payload),
             
                 
             }
