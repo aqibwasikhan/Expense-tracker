@@ -5,10 +5,7 @@ import { Transaction } from './Transaction'
 const TransactionList = () => {
     const { transactions } = useContext(GlobalContext)
     const { clearAll } = useContext(GlobalContext)
-    // transactions = transactions.sort((a, b) => {
-    //     return new Date(b.date) - new Date(a.date)
-    //   })
-    // console.log(context)
+   
     return (
         <>
             <h3>History</h3>
